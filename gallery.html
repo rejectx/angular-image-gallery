@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <link rel="stylesheet" href="fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  </head>
+  <body ng-app="myApp" ng-controller="myCtrl">
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $(".fancybox").fancybox({
+            "autoScale": false
+          });
+        });
+    </script>
+
+    <div class="d-flex f-row">
+
+      <div class="side-a">
+      <div ng-click="imgNext()"><span class="arrow">&#708;</span></div>
+        <div class="d-flex f-col f-center-xy">
+          <div ng-repeat="image in images | limitTo:4">
+            <img ng-click="changeMainImage($index)" ng-src="{{image}}" ng-class="{'img-inactive': mainImageIndex != $index}" height="50%" width="50%"></li>
+          </div>
+        </div>
+        <div  ng-click="imgPrev()"><span class="arrow">&#709;</span></div>
+      </div>
+
+      <div class="side-b f-grow" >
+        <!-- <img ng-src="{{images[0]}}"> -->
+        <div class="img-inside">
+          <img ng-src="{{images[mainImageIndex]}}" alt="">
+          <div class="img-zoom"><a class="fancybox" rel="group" ng-href="{{images[mainImageIndex]}}"><span>&#128269;</span></a></div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!--  -->
+    <script src="app.js"></script>
+    <script type="text/javascript" src="fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <!--  -->
+  </body>
+</html>

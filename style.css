@@ -1,0 +1,108 @@
+.cl-y {
+  background-color: yellow;
+}
+
+.cl-g {
+  background-color: green;
+}
+
+.cl-r {
+  background-color: red;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.f-row {
+  flex-direction: row;
+}
+
+.f-col {
+  flex-direction: column;
+}
+
+.f-center-xy {
+  justify-content: center;
+  align-items: center;
+}
+
+.f-grow {
+  flex-grow: 1;
+}
+
+.side-a {
+  width: 20%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.side-a img {
+  margin: 1%;
+  padding: 1%;
+  border: 1px solid #696969;
+}
+
+.img-inactive {
+  opacity: 0.5;
+}
+
+
+.side-a img:active {
+  border: 1px solid #red;
+}
+
+
+
+.side-b {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #D3D3D3;
+  box-shadow: 0px 0px 10px #808080;
+  height: 90vh;
+}
+
+.arrow {
+  font-size: 2em;
+}
+
+h1 {
+  text-align: center;
+}
+
+.glass-icon {
+  position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.img-inside {
+  position: relative;
+  height: 90%;
+}
+
+.img-inside img {
+  height: 100%;
+  
+}
+
+.img-zoom {
+  background-color: #333;
+  border: 1px solid #999;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  font-size: 2em;
+  padding: 1%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a, a:visited, a:hover, a:active {
+  color: inherit;
+}
